@@ -67,7 +67,6 @@ const V3form = () => {
         <MenuItem value="Select">Select a Text</MenuItem>
         <MenuItem value="Buy It Now">Buy It Now</MenuItem>
         <MenuItem value="Buy Now">Buy Now</MenuItem>
-        <MenuItem value="One Click Checkout">One Click Checkout</MenuItem>
         <MenuItem value="Checkout with Simpl">Checkout with Simpl</MenuItem>
         <MenuItem value="Buy Now with Simpl">Buy Now with Simpl</MenuItem>
         <MenuItem value="Buy with UPI/COD">Buy with UPI/COD</MenuItem>
