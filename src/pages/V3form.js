@@ -68,14 +68,13 @@ const V3form = () => {
         <MenuItem value="Buy It Now">Buy It Now</MenuItem>
         <MenuItem value="Buy Now">Buy Now</MenuItem>
         <MenuItem value="Checkout with Simpl">Checkout with Simpl</MenuItem>
-        <MenuItem value="Buy Now with Simpl">Buy Now with Simpl</MenuItem>
         <MenuItem value="Buy with UPI/COD">Buy with UPI/COD</MenuItem>
         <MenuItem value="Buy with UPI">Buy with UPI</MenuItem>
         <MenuItem value="Quick Buy">Quick Buy</MenuItem>
         <MenuItem value="Buy in 1 click">Buy in 1 click</MenuItem>
         <MenuItem value="Order Now">Order Now</MenuItem>
-        <MenuItem value="Buy Now With Simpl">Buy Now With Simpl</MenuItem>
         <MenuItem value="UPI / Pay-in-3 / COD">UPI / Pay-in-3 / COD</MenuItem>
+        <MenuItem value="Checkout">Checkout</MenuItem>
       </Select>
     ),
     createData(
