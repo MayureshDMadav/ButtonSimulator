@@ -1,20 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import JsonStrigify from "../component/JsonStrigify";
 import { Typography } from "@mui/material";
+import CopyPaste from "../component/CopyPaste";
 
-const Version3 = ({ data, BorderR, fntsz, padding, symBol }) => {
+const Version3 = ({ data, BorderR, fntsz, padding, symBol, disFnt }) => {
+  const [text, getText] = useState("");
   const Top = `<div class='promo-text-container simpl-button-v3-variables' style=${
     data.Discountdiv === "hide" ? "display:none;" : "display:block;"
   }>
-  <div class='promo-text' style='border-top-left-radius: 4px; border-top-right-radius: 4px;'>${
+  <div class='promo-text' style='border-top-left-radius: 4px; border-top-right-radius: 4px;font-size:${disFnt}px;'>${
     data.DiscountText
   }</div></div> `;
   const Bottom = `<div class='promo-text-container simpl-button-v3-variables' style=${
     data.Discountdiv === "hide" ? "display:none;" : "display:block;"
   }>
-    <div class='promo-text' style='border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;'>${
-      data.DiscountText
-    }</div></div> `;
+    <div class='promo-text' style='border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;font-size:${disFnt}px;'>${
+    data.DiscountText
+  }</div></div> `;
 
   const Styling = ` 
   .simpl-button-v3-variables { --simpl-button-v3-textColor: ${
@@ -62,10 +64,8 @@ const Version3 = ({ data, BorderR, fntsz, padding, symBol }) => {
     data.PostiionDiscount === "Bottom" ? Bottom : " "
   }  <div style='display: none;' id='simpl-breakpoints' data-breakpoints='270,330,380'></div>  `;
 
-  function print() {
-    const value = "<style>" + Styling + "</style>" + btnString;
-    return <span> {JsonStrigify(value)} </span>;
-  }
+  const value = "<style>" + Styling + "</style>" + btnString;
+  const words = JsonStrigify(value);
 
   return (
     <div>
@@ -126,17 +126,7 @@ const Version3 = ({ data, BorderR, fntsz, padding, symBol }) => {
       ></div>
 
       <br />
-
-      <details>
-        <Typography
-          variant="h6"
-          sx={{ marginBottom: "2px", fontFamily: "Pacifico,cursive" }}
-        >
-          Simpl Button API Value
-        </Typography>
-
-        <span style={{ fontSize: 13 }}>{print()}</span>
-      </details>
+      <CopyPaste text={words} />
     </div>
   );
 };

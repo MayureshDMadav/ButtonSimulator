@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       {/* <V3form /> */}
-      <SelectForm />
+      <V3form />
       {/* <JsonStrigify/> */}
       {/* <Theme /> */}
       {/* <V3button /> */}

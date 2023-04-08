@@ -1,0 +1,40 @@
+.container{
+    display: grid;
+
+}
+
+.grid_1{
+    display: grid;
+    grid-template-columns: repeat(4,100px);
+    justify-content: space-evenly;
+    row-gap: 10px;
+}
+
+.grid_3{
+    display: grid;
+    grid-template-columns: repeat(4,100px);
+    justify-content: space-evenly;
+    row-gap: 10px;
+}
+
+.grid_2{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  
+}
+
+h3{
+    text-align: center;
+}
+
+.css-mwzhhv-MuiFormControl-root-MuiTextField-root{
+    width: 11.5rem !important;
+}
+.css-rho0xo-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
+    width: 11.5rem !important;
+}
+
+h1{
+    text-align: center;
+}
