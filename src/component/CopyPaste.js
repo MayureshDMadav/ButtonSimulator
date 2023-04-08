@@ -2,8 +2,14 @@ import React, { useState } from "react";
 
 const CopyPaste = ({ text }) => {
   function copyToClipboard() {
-    navigator.clipboard.writeText(text);
-    alert("copied");
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        alert("successfully copied");
+      })
+      .catch(() => {
+        alert("something went wrong");
+      });
   }
 
   const styling = `
