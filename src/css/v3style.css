@@ -24,8 +24,12 @@
   
 }
 
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
+    padding: 5px !important;
+}
+
 input#outlined-basic{
-    padding: 11px !important;
+    padding: 5px !important;
 }
 
 h3{
