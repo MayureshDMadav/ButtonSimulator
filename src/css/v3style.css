@@ -24,6 +24,10 @@
   
 }
 
+input#outlined-basic{
+    padding: 11px !important;
+}
+
 h3{
     text-align: center;
 }
