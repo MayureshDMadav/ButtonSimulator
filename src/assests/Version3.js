@@ -18,6 +18,8 @@ const Version3 = ({ data, BorderR, fntsz, padding, symBol, disFnt }) => {
     data.DiscountText
   }</div></div> `;
 
+  const center = `${data.PostiionDiscount === 'Inside'?`<span><p style='margin:0;padding:0;'>${data.Text}</p><p style='margin:0;padding:0;font-size:${disFnt}px;line-height: 15px;'>${data.DiscountText}</p></span>`:`${data.Text}`}`;
+
   const Styling = ` 
   .simpl-button-v3-variables { --simpl-button-v3-textColor: ${
     data.Text_Color
@@ -28,7 +30,7 @@ const Version3 = ({ data, BorderR, fntsz, padding, symBol, disFnt }) => {
   }; --simpl-button-v3-promoTextbackgroundColor: ${
     data.DiscountBackgrnd
   }; --simpl-button-v3-promoTextColor: ${data.DiscountTextColor}; }
-  .simpl-button-v3 { width: 100%; padding: ${padding}px; font-size: ${fntsz}px; ${
+  .simpl-button-v3 { width: 100%; padding: ${data.PostiionDiscount === 'Inside'? '7px;': `${padding}px`} ; font-size: ${fntsz}px; ${
     data.Font_Weight !== 0 ? `font-weight:${data.Font_Weight};` : ""
   } background-color: var(--simpl-button-v3-backgroundColor); color: var(--simpl-button-v3-textColor); border-radius: var(--simpl-button-v3-borderRadius); cursor: pointer; display: inline-flex; align-items: center; white-space: nowrap; border: none; }
   .simpl-button-v3:hover { color: var(--simpl-button-v3-hoverTextColor); background-color: var(--simpl-button-v3-hoverbackgroundColor); }
@@ -54,7 +56,7 @@ const Version3 = ({ data, BorderR, fntsz, padding, symBol, disFnt }) => {
     data.PostiionDiscount === "Top" ? Top : " "
   } <button id='simpl_buynow-button' class='simpl-button-v3-variables simpl-button-v3 simpl-button'>     <div class='left-section' style='width: 25%; display: inline-flex;'></div>     <div class='center-section' style='width: 50%;'>       <img src='https://simpl-cdn.s3.amazonaws.com/images/checkout/SimplLogo.svg' style=${
     data.SimplLogo === "hide" ? "display:none;" : "display:block"
-  }>    ${data.Text}</div>     <div class='right-section' style=${
+  }> ${data.PostiionDiscount === 'Inside'?`<span><p style='margin:0;padding:0;'>${data.Text}</p><p style='margin:0;padding:0;font-size:${disFnt}px;line-height: 15px;'>${data.DiscountText}</p></span>`:`${data.Text}`}    </div>     <div class='right-section' style=${
     data.SimplProp === "hide" ? "display:none;" : "width:25%;"
   }>       <img alt='right section image' src=${
     data.SimplProp_v === "Chevron"
@@ -91,7 +93,11 @@ const Version3 = ({ data, BorderR, fntsz, padding, symBol, disFnt }) => {
               data.SimplLogo === "hide" ? "display:none;" : "display:block"
             }`}
           />
-          {data.Text}
+            {data.PostiionDiscount === "Inside" ? (
+        <div dangerouslySetInnerHTML={{ __html: center }} />
+      ) : (
+        `${data.Text}`
+      )}
         </div>
         <div
           className="right-section"

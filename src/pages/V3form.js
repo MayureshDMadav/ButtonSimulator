@@ -284,6 +284,7 @@ const V3form = () => {
           >
             <MenuItem value="select">select Position</MenuItem>
             <MenuItem value="Top">Top</MenuItem>
+            <MenuItem value="Inside">Inside</MenuItem>
             <MenuItem value="Bottom">Bottom</MenuItem>
           </Select>
         </div>
