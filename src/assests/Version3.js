@@ -18,7 +18,7 @@ const Version3 = ({ data, BorderR, fntsz, padding, symBol, disFnt }) => {
     data.DiscountText
   }</div></div> `;
 
-  const center = `${data.PostiionDiscount === 'Inside'?`<span><p style='margin:0;padding:0;'>${data.Text}</p><p style='margin:0;padding:0;font-size:${disFnt}px;line-height: 15px;'>${data.DiscountText}</p></span>`:`${data.Text}`}`;
+  const center = `${data.PostiionDiscount === 'Inside'?`<span ><p style='margin:0;padding:0;'>${data.Text}</p><p style='margin:0;padding:0;font-size:${disFnt}px;line-height: 15px;${data.Discountdiv === 'hide'? 'display:none;':''}'>${data.DiscountText}</p></span>`:`${data.Text}`}`;
 
   const Styling = ` 
   .simpl-button-v3-variables { --simpl-button-v3-textColor: ${
@@ -56,7 +56,7 @@ const Version3 = ({ data, BorderR, fntsz, padding, symBol, disFnt }) => {
     data.PostiionDiscount === "Top" ? Top : " "
   } <button id='simpl_buynow-button' class='simpl-button-v3-variables simpl-button-v3 simpl-button'>     <div class='left-section' style='width: 25%; display: inline-flex;'></div>     <div class='center-section' style='width: 50%;'>       <img src='https://simpl-cdn.s3.amazonaws.com/images/checkout/SimplLogo.svg' style=${
     data.SimplLogo === "hide" ? "display:none;" : "display:block"
-  }> ${data.PostiionDiscount === 'Inside'?`<span><p style='margin:0;padding:0;'>${data.Text}</p><p style='margin:0;padding:0;font-size:${disFnt}px;line-height: 15px;'>${data.DiscountText}</p></span>`:`${data.Text}`}    </div>     <div class='right-section' style=${
+  }> ${data.PostiionDiscount === 'Inside'?`<span ><p style='margin:0;padding:0;'>${data.Text}</p><p style='margin:0;padding:0;font-size:${disFnt}px;line-height: 15px;${data.Discountdiv === 'hide'? 'display:none;':''}'>${data.DiscountText}</p></span>`:`${data.Text}`}    </div>     <div class='right-section' style=${
     data.SimplProp === "hide" ? "display:none;" : "width:25%;"
   }>       <img alt='right section image' src=${
     data.SimplProp_v === "Chevron"
